@@ -8,8 +8,12 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+- stage:
+- jobs:
+  - job:
+    pool:
+      vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
