@@ -13,6 +13,7 @@ server.register(helloworldRoutes);
 const start = async () => {
   try {
     await server.listen(3000);
+  
   } catch (err) {
     console.log(err);
     server.log.error(err);
