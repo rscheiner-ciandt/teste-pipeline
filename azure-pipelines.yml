@@ -22,3 +22,13 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'npm install'
+- task: Bash@3
+  displayName: 'Lint'
+  inputs:
+    targetType: 'inline'
+    script: 'npm run lint'
+- task: Bash@3
+  displayName: 'Teste Unitario'
+  inputs:
+    targetType: 'inline'
+    script: 'npm run test'
