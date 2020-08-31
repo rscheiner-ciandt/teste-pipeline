@@ -1,21 +1,7 @@
 trigger:
 - master
-#include:
-#-master
-#-release
-#-feature/*
-#exclude:
-#-releases/old*
-#-feature/*-working
 pool:
   vmImage: 'ubuntu-latest'
-#jobs:
-#-job: A
-#   steps:
-#   - bash: Echo "A"
-#-job: B
-#   steps:
-#   -bash: Echo "B"
 jobs:
   -job: Teste
   steps:
