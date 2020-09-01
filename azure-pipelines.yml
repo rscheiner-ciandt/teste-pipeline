@@ -3,8 +3,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 jobs:
-  -job: Teste
-  steps:
+  - job: Teste
+    steps:
     - task: Bash@3
       displayName: 'Dependencias'
       inputs:
@@ -15,12 +15,12 @@ jobs:
       inputs:
         targetType: 'inline'
         script: 'npm run lint'
-  -job: ParallelTesting
-  strategy:
-    parallel: 2
-  steps:
-    - task: Bash@3
-      displayName: 'Teste Unitario'
-      inputs:
-        targetType: 'inline'
-        script: 'npm run test'
+  - job: ParallelTesting
+    strategy:
+      parallel: 2
+    steps:
+      - task: Bash@3
+        displayName: 'Teste Unitario'
+        inputs:
+          targetType: 'inline'
+          script: 'npm run test'
